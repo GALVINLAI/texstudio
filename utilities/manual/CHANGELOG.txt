@@ -1,8 +1,9 @@
-TeXstudio 4.5.3
------------------
-- 
-
-CHANGELOG was moved to "utilities/manual/source/CHANGELOG.md"
-CHANGELOG is part of help and can be displayed from about dialog.
-Use markdown syntax !
-
+% 重要：重新定义章节开始页的样式
+% plain 是 LaTeX 在新章节的首页默认使用的页样式。
+% 通过这个定义，新章节的首页也将采用自定义的页眉和页脚。
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[LO]{\nouppercase \rightmark}
+  \fancyhead[LE,RO]{\bfseries \thepage} 
+  \fancyhead[RE]{\nouppercase \leftmark}
+}
